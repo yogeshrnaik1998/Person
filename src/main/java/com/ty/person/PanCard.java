@@ -4,18 +4,16 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.OneToOne;
 
 @Entity
-public class Person {
+public class PanCard {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int id;
 	private String name;
-	private String address;
-	private long phone;
-	@OneToOne
-	private PanCard card;
+	private String addno;
+	private long phno;
+
 	public int getId() {
 		return id;
 	}
@@ -32,25 +30,25 @@ public class Person {
 		this.name = name;
 	}
 
-	public String getAddress() {
-		return address;
+	public String getAddno() {
+		return addno;
 	}
 
-	public void setAddress(String address) {
-		this.address = address;
+	public void setAddno(String addno) {
+		this.addno = addno;
 	}
 
-	public long getPhone() {
-		return phone;
+	public long getPhno() {
+		return phno;
 	}
 
-	public void setPhone(long phone) {
-		this.phone = phone;
+	public void setPhno(long phno) {
+		this.phno = phno;
 	}
 
 	@Override
 	public String toString() {
-		return "Person [id=" + id + ", name=" + name + ", address=" + address + ", phone=" + phone + "]";
+		return "PanCard [id=" + id + ", name=" + name + ", addno=" + addno + ", phno=" + phno + "]";
 	}
 
 }
